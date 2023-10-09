@@ -10,6 +10,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+      .all-container {
+        display: flex;
+        justify-content: center;
+         
+      }
+
+      .main-container {
+        position: relative;
+        display: flex;
+        background-color: aliceblue;
+        margin-top: 85px;
+        width: 1000px;
+        border: 2px solid;
+        border-color: #256097fa;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgb(42, 85, 93);;
+
+        /* margin: 100px 0px 50px 140px; */
+        
+      }
+      
+      .main-container .h1 {
+        display: flex;
+        font-family: 'Poppins';
+        font-size: 18px;
+        margin-left: 350px;
+        margin-right: 50px;        
+      }
+
+      .main-container .photo {
+        margin-top: 30px;
+        display: flex;
+        margin-left: 550px;
+        margin-right: 50px;        
+      }
+
+      #photo {
+        width: 230px;
+        height: 300px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+      .container {
+        margin-top: 100px;
+        font-size: 8px;
+        margin-left: 20px;
+      }
+
+      h1 {
+        margin: 5px;
+      }
+
+
+
+
+    </style>
 </head>
 <body>
         <!--ini header-->
@@ -31,11 +89,18 @@
             </div>
           </header>
 
-          <img width="150" id="photo">
-          <h1 class="data" c-atr="email">Email </h1>
-          <h1 class="data" c-atr="name">Name </h1>
-          <h1 class="data" c-atr="no_praktek">No Prak </h1>
-          <h1 class="data" c-atr="pendidikan">Pendidikan </h1>
+
+          <div class="all-container">
+            <div class="main-container">
+              <img width="150" id="photo">
+              <div class="container">
+                <h1 class="data" c-atr="email">Email : </h1>
+                <h1 class="data" c-atr="name">Name : </h1>
+                <h1 class="data" c-atr="no_praktek">No Prak :</h1>
+                <h1 class="data" c-atr="pendidikan">Pendidikan :</h1>
+              </div>
+            </div>            
+          </div>
 
 
           <!--javascript-->
