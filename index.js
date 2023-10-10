@@ -37,10 +37,10 @@ app.use(bodyParser.json());
 startSequelize(sequelize);
 
 app.use(express.json());
-app.use(userRouter);
-app.use(psycologistRouter);
-app.use(authRouter);
-app.use(messageRouter);
+app.use(userRouter, cors());
+app.use(psycologistRouter, cors());
+app.use(authRouter, cors());
+app.use(messageRouter, cors());
 
 
 app.listen(port, () => {
