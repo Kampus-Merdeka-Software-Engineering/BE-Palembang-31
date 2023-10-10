@@ -17,6 +17,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
+app.options('*', cors());
+
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -26,8 +28,6 @@ app.use(session({
         secure: "auto"
     }
 }))
-
-app.options('*', cors());
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.raw());
