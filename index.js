@@ -10,14 +10,13 @@ import psycologistRouter from "./routes/psycologists.js";
 import authRouter from "./routes/auth.js";
 import messageRouter from "./routes/message.js";
 
-import * as url from 'url';
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
-app.use(express.static(__dirname+"/public/"))
+
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -28,11 +27,7 @@ app.use(session({
     }
 }))
 
-app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:3000'
-}));
-
+app.options('*', cors());
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.raw());
