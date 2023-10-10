@@ -17,7 +17,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-app.use(cors({origin: ['http://localhost:5501']}));
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5501'
+}));
 
 
 app.use(session({
